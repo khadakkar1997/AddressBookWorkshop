@@ -19,11 +19,4 @@ public class AddressBookTest {
         Assertions.assertEquals(1, contactList.get("Family").size());
     }
 
-    @Test
-    public void givenContactName_whenUpdated_ShouldReturn_true() {
-        AddressBookMain addressBookMain = new AddressBookMain();
-        Contact contact = new Contact("Arya", "Khadakkar", "Ram Nagar", "Nagpur", "MH", "442001", "7385697450", "arkhadakkar@gmail.com");
-        HashMap<String, List<Contact>> contactList = addressBookMain.addContact("Family", contact);
-        boolean result = addressBookMain.updateContact(contactList, "Family", "arya", "address", "Shivaji Nagar");
-        Assertions.assertTrue(result);
-    }
+  
