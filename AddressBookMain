@@ -1,0 +1,31 @@
+package com.bridgelabz.addressbook;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+
+public class AddressBookMain {
+
+    public static List<Contact> contactList = new ArrayList<>();
+    public static HashMap<String, List<Contact>> addressBookMap = new HashMap<>();
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Address Book Program");
+    }
+
+    public HashMap<String, List<Contact>> addContact(String addressBookName, Contact contact) {
+        try {
+            if (!addressBookMap.containsKey(addressBookName)) {
+                createNewAddAddressBook(addressBookName);
+            }
+            boolean check = checkDuplicate(addressBookMap, addressBookName, contact);
+            if (!check) {
+                addressBookMap.get(addressBookName).add(contact);
+                System.out.println("Contact Added Successfully.");
+            } else return addressBookMap;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return addressBookMap;
+    }
