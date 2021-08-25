@@ -1,4 +1,4 @@
-package com.bridgelabs;
+package AddressBookWorkshop
 
 import java.util.Scanner;
 
