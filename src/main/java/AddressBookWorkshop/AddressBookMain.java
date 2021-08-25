@@ -1,4 +1,4 @@
-package AddressBookWorkshop
+package AddressBookWorkshop;
 
 import java.util.Scanner;
 
