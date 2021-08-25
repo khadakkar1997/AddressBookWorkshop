@@ -1,14 +1,15 @@
 package AddressBookWorkshop;
 
-public class AddressBookMain {
+import java.util.LinkedList;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to address book program");
-
-        // Creating reference object for AddressBookServiceClass.
+public class AddressBookMain
+{
+    public static void main(String[] args)
+    {
         AddressBookService addressBookService = new AddressBookService();
-
-        // Calling create person method from AddressBookService class.
         addressBookService.createContact();
+        Contacts contact = addressBookService.createContact();
+        LinkedList<Contacts> contactlist = addressBookService.addContacts(contact);
+        System.out.println(contactlist);
     }
 }
